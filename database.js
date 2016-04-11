@@ -66,7 +66,7 @@ function generateBids(users, product) {
 
     let deadlineDifference = 1210000*1000; // 2 weeks
     let lowerBound = deadline.getTime() - deadlineDifference;
-    const upperBound = deadline.getTime();
+    const upperBound = (new Date()).getTime();
 
     let rows = [];
     for (var i=0; i<numBids; i++) {
